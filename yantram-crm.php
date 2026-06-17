@@ -21,6 +21,7 @@ define('YANTRAM_CRM_BASENAME', plugin_basename(__FILE__));
 
 // Load the main plugin class
 require_once YANTRAM_CRM_PATH . 'includes/class-yantram-crm.php';
+require_once YANTRAM_CRM_PATH . 'includes/class-shortcodes.php';
 
 // Activate/Deactivate hooks
 register_activation_hook(__FILE__, ['Yantram_CRM', 'activate']);
