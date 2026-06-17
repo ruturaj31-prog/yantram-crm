@@ -1,0 +1,177 @@
+:root {
+    --color-new: #003366;
+    --color-active: #006600;
+    --color-hold: #CC9900;
+    --color-aold: #666666;
+    --color-close: #009900;
+    --primary-color: #D2691E;
+}
+
+.yantram-crm-dashboard {
+    background-color: #f5f1e8;
+    padding: 20px;
+}
+
+.yantram-stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    border-left: 4px solid #999;
+}
+
+.stat-box h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.stat-box .count {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.stat-box .percentage {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+
+.stat-new { border-left-color: var(--color-new); }
+.stat-active { border-left-color: var(--color-active); }
+.stat-hold { border-left-color: var(--color-hold); }
+.stat-aold { border-left-color: var(--color-aold); }
+.stat-close { border-left-color: var(--color-close); }
+
+.yantram-total-leads {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.yantram-total-leads h2 {
+    margin: 0 0 10px 0;
+}
+
+.yantram-total-leads .total-count {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.yantram-total-leads .description {
+    color: #666;
+    margin: 10px 0 0 0;
+}
+
+.yantram-crm-leads {
+    background-color: #f5f1e8;
+    padding: 20px;
+}
+
+.yantram-lead-controls {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.yantram-search-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.wp-list-table {
+    background: white;
+    border-collapse: collapse;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.status-New { background-color: var(--color-new); }
+.status-Active { background-color: var(--color-active); }
+.status-Hold { background-color: var(--color-hold); color: #000; }
+.status-A-Old { background-color: var(--color-aold); }
+.status-Close { background-color: var(--color-close); }
+
+.yantram-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover { color: #000; }
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+@media (max-width: 768px) {
+    .yantram-stats-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .modal-content {
+        width: 90%;
+    }
+}
